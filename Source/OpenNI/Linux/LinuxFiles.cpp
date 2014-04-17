@@ -596,7 +596,7 @@ XN_C_API XnStatus xnOSDoesFileExist(const XnChar* cpFileName, XnBool* pbResult)
 	if ((access(cpFileName, F_OK)) != -1)
 	{
 		*pbResult = TRUE;
-	}
+        }
 
 	// All is good...
 	return (XN_STATUS_OK);

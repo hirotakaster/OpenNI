@@ -136,7 +136,8 @@ XN_C_API XnStatus XN_C_DECL xnOSGetApplicationFilesDir(XnChar* cpDirName, const 
 	char strAppName[1024];
 
 	getApplicationName(strAppName, sizeof(strAppName));
-	snprintf(cpDirName, nBufferSize, "/data/data/%s/files/", strAppName);
+	// snprintf(cpDirName, nBufferSize, "/data/data/%s/files/", strAppName);
+	sprintf(cpDirName, "/system/ni/", strAppName);
 
 	return (XN_STATUS_OK);
 }
@@ -146,7 +147,8 @@ XN_C_API XnStatus XN_C_DECL xnOSGetApplicationLibDir(XnChar* cpDirName, const Xn
 	char strAppName[1024];
 
 	getApplicationName(strAppName, sizeof(strAppName));
-	snprintf(cpDirName, nBufferSize, "/data/data/%s/lib/", strAppName);
+	// snprintf(cpDirName, nBufferSize, "/data/data/%s/lib/", strAppName);
+	sprintf(cpDirName, "/");
 
 	return (XN_STATUS_OK);
 }
